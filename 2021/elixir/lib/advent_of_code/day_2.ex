@@ -1,9 +1,7 @@
 defmodule Day2 do
   def calc_position(directions), do: do_calc_position(directions, 0, 0)
 
-  defp do_calc_position([], horizontal, depth) do
-    horizontal * depth
-  end
+  defp do_calc_position([], horizontal, depth), do: horizontal * depth
 
   defp do_calc_position([head | tail], horizontal, depth) do
     {h, d} =
@@ -23,9 +21,7 @@ defmodule Day2 do
 
   def calc_position_with_aim(directions), do: do_calc_position_with_aim(directions, 0, 0, 0)
 
-  defp do_calc_position_with_aim([], horizontal, depth, _aim) do
-    horizontal * depth
-  end
+  defp do_calc_position_with_aim([], horizontal, depth, _aim), do: horizontal * depth
 
   defp do_calc_position_with_aim([head | tail], horizontal, depth, aim) do
     {h, d, new_aim} =
