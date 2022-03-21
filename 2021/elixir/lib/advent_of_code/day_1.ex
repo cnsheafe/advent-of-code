@@ -22,4 +22,10 @@ defmodule Day1 do
   end
 
   defp do_count_increases_with_window(_list, _last_sum, count), do: count
+
+  def parse_input(filename) do
+    filename
+    |> Input.read()
+    |> Enum.map(&String.to_integer/1)
+  end
 end

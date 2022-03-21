@@ -9,6 +9,5 @@ defmodule Input do
   defp parse_lines(bin_text) do
     bin_text
     |> String.split("\n", trim: true)
-    |> Enum.map(&String.to_integer/1)
   end
 end

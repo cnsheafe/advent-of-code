@@ -14,7 +14,7 @@ defmodule Day1Test do
     test "it should count the increases from the input" do
       num_increases =
         "inputs/day_1"
-        |> Input.read()
+        |> Day1.parse_input()
         |> Day1.count_increases()
 
       assert num_increases == 1342
@@ -33,7 +33,7 @@ defmodule Day1Test do
     test "it should count the increases from the input" do
       num_increases =
         "inputs/day_1"
-        |> Input.read()
+        |> Day1.parse_input()
         |> Day1.count_increases_with_window()
 
       assert num_increases == 1378
